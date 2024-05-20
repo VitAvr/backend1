@@ -17,7 +17,7 @@ try {
     console.error('Connection error:', error);
 }
 //----------
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'https://frontend1k-34b498e2dffc.herokuapp.com/' }));
 app.use(cookieParser());
 app.use(express.json());
 
