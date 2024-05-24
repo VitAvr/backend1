@@ -48,7 +48,9 @@ export const updateFirm = async (req, res) => {
 // delete firm
 export const deleteFirm = async (req, res) => {
     try {
-        await Firm.destroy(req.body);
+        await Firm.destroy({
+            where: {id: req.params.id},
+        });
         res.json({
             message: 'Фирма удалена',
         });
