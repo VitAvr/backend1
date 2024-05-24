@@ -35,7 +35,9 @@ export const addFirm = async (req, res) => {
 // update firm
 export const updateFirm = async (req, res) => {
     try {
-        await Firm.update(req.body);
+        await Firm.update(req.body, {
+            where: { id: req.params.id }
+        });
         res.json({
             message: 'Фирма обновлена',
         });
