@@ -120,7 +120,7 @@ export const updateUser = async (req, res) => {
 
       const user = await Users.findOne({
          where: {
-            id: req.params.id
+            email: email,
          },
       });
 
